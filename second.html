@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Education page | academic details</title>
+  <link rel="stylesheet" type="text/css" href="second.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+</head>
+<body>
+<div class="container">
+  <header class="header"><strong>Academic details</strong></header>
+
+  <form id="form" action="third.html" method="get">
+          <div id="error"></div>
+          <div class="fields">
+          <div class="input field">
+            <label for="name">HSC</label><br>
+            <input type="text" id="Hname" name="name" placeholder="Institution name" size="66" required><br><br>
+            <input type="text" id="Hboard" name="name" placeholder="CBSE,ICSE or STATE" size="30" required>
+            <input type="number" id="Hscore" name="name" placeholder="Score" required>
+          </div>
+
+            <br>
+            <br>
+
+            <div class="input field">
+            <label for="name">SSC</label><br>
+            <input type="text" id="Sname" name="name" placeholder="Institution name" size="66" required><br><br>
+            <input type="text" id="Sboard" name="name" placeholder="CBSE,ICSE or STATE" size="30" required>
+            <input type="number" id="Sscore" name="name" placeholder="Score" size="30" required>
+          </div>
+
+            <br>
+            <br>
+
+            <div class="input field">
+            <label for="name">Currently Pursuing</label><br>
+            <input type="text" id="cp" name="name" size="66" required>
+          </div>
+            <br><br>
+            
+            <div class="input field">
+            <label for="name">Current Institution Name</label><br>
+            <input type="text" id="Iname" name="name" placeholder="institution name" size="66" required>
+          </div>
+            <br><br>
+            
+            <div class="input field">
+            <label for="name">Overall percentage</label><br>
+            <input type="number" id="op" name="name" required>
+          </div><br><br>
+
+            <div class="input field">
+            <label>Current backlogs, if any</label><br>
+            <input type="radio" id="cb" name="cb">
+            <label for="yes">yes</label>
+            <input type="radio" id="cb" name="cb">
+            <label for="no">no</label><br>
+            </div>
+            <br>
+            <br>
+          
+            <button class="btn"><a href="first.html">Back</a></button>
+            <button type="submit" class="next">Next</button>
+          
+          </div>  
+  </form>
+</div>
+</body>
+<script src="second.js"></script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home page | Personal details</title>
+	<link rel="stylesheet" type="text/css" href="first.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+	<script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> 
+</head>
+<body>
+<div class="container">
+	<header class="header"><strong>Personal details</strong></header>
+
+	<form id="form" action="second.html" method="get">
+		<div id="seterror"></div>
+					<div class="fields">
+					<div class="input-field">
+						<label for="name">Name</label><br>
+						<input type="text" id="fname" name="name" placeholder="first" size="30" required>
+						<input type="text" id="lname" name="name" placeholder="last" size="30" required>
+					</div>
+						<br>
+						<br>
+
+						<div class="input-field">
+						<label for="dob">Date of birth</label><br>
+						<input type="date" id="dob" name="dob" size="60" required>
+					</div>
+						<br>
+						<br>
+
+						<div class="input-field">
+						<label for="email">Email</label><br>
+						<input type="text" id="email" name="email" size="66" required>
+					</div>
+						<br>
+						<br>
+						<div class="input-field">
+						<label for="fname">Father's Name</label><br>
+						<input type="text" id="father_fname" name="fname" placeholder="first" size="30" required>
+						<input type="text" id="father_lname" name="fname" placeholder="last" size="30" required>
+					</div>
+						<br>
+						<br>
+
+						<div class="input-field">
+						<label for="mname">Mother's Name</label><br>
+						<input type="text" id="mother_fname" name="mname" placeholder="first" size="30" required>
+						<input type="text" id="mother_lname" name="mname" placeholder="last" size="30" required>
+					</div>
+						<br>
+						<br>
+
+						<div class="input-field">
+						<label>Gender</label><br>
+						<input type="radio" id="gender" name="gender" required>
+  					<label for="male">Male</label>
+  					<input type="radio" id="gender" name="gender" required>
+  					<label for="female">Female</label><br>
+					</div>	
+						<br>
+						<br>
+
+						<div class="input-field">
+						<label for="nation">Nationality</label><br>
+						<input type="text" id="nation" name="Nationality" size="66" required>
+					</div>
+						<br>
+						<br>
+
+						<div class="input-field">
+						<label>Home address</label><br>
+						<input type="text" id="address" name="saddress" placeholder="street address" size="66" required><br><br>
+						<input type="text" id="address" name="city" placeholder="city" size="66" required>
+					
+						<br>
+						<br>
+
+						<select name="country" required id="country">
+    				    <option value="">select country</option>
+    					<option value="afghanistan">Afghanistan</option>
+    					<option value="algeria">Algeria</option>
+    					<option value="argentina">Argentina</option>
+    					<option value="india">India</option>
+    					
+						</select>
+					</div>
+  						<br>
+  						<br>
+
+						  <div class="input-field">
+							<label for="mno">Telephone-Mobile</label><br>
+							<input type="number" id="Mno" name="mobile" placeholder="### ### ####" size="66" required>
+						</div>
+							<br><br>
+
+  						<div class="input-field">
+  						<label for="Hno">Telephone-Home</label><br>
+						<input type="number" id="Hno" name="mobile" placeholder="### ### ####" size="66">
+					</div>
+						<br>
+						<br>
+
+						
+
+						<button type="submit" class="btn">next</button>
+					
+					</div>	
+	</form>
+</div>
+</body>
+<script src="first.js"></script>
+</html>

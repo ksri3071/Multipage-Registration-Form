@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="third.css" />
+    <title>Documents page | documents details</title>
+    <!-- <script defer src="main3.js"></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <header class="header"><strong>Upload Documents</strong></header>
+
+      <form id="form3"  onsubmit="return validation()" name="myforms">
+        <!-- <form id="form3" action="connect.php" method="post"> -->
+        <div class="form first-form">
+          <div class="details personal"></div>
+          
+          <div id="error"></div>
+          <div class="fields">
+            <div class="input-field">
+              <p><strong>passport size photograph (image size less than 4MB)</strong></p>              
+              <label>Browse file</label><br><br>
+              <input type="file" id="file"  name="photo" accept="image/*" required/>
+            </div>
+
+            <div class="input-field">
+              <p><strong>HSC mark sheet (PDF size less than 4MB)</strong></p>
+              <label>Browse file</label><br><br>
+              <input type="file" id="file" name="HSCmarksheet" accept=".pdf"  required/>
+            </div>
+ 
+            <div class="input-field">
+              <p><strong>SSC mark sheet (PDF size less than 4MB)</strong></p>
+              <label>Browse file</label><br><br>
+              <input type="file" id="file"  name="SSCMarksheet" accept=".pdf"  required/>
+            </div>
+
+            <!-- <button type="submit" value="submit">submit</button> -->
+            <button class="btn"><a href="second.html">Back</a></button>
+          <button type="submit" class="sub">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      var  image =document.forms['myforms']['photo'];
+      var  HSCmarksheet=document.forms['myforms']['HSCmarksheet'];
+      var  SSCMarksheet=document.forms['myforms']['SSCMarksheet'];
+      var  pext = ["jpeg","png","jpg"]
+      var  hext = ["pdf"]
+      var  sext = ["pdf"]
+
+      function validation(){
+        var image_size=image.files[0].size;
+        if(image.value!=''){
+          var image_ext=image.value.split('.').pop().toLowerCase();
+          if(pext.indexOf(image_ext)==-1){
+            alert("Invalid image format");
+            image.value='';
+            return false;
+          }
+          if(image_size>4000000){
+            alert("Image size is too large");
+            image.value='';
+            return false;
+          }
+        }
+        var HSCmarksheet_size=HSCmarksheet.files[0].size;
+        if(HSCmarksheet.value!=''){
+          var HSCmarksheet_ext=HSCmarksheet.value.split('.').pop().toLowerCase();
+          if(hext.indexOf(HSCmarksheet_ext)==-1){
+            alert("Invalid HSCmarksheet format");
+            HSCmarksheet.value='';
+            return false;
+          }
+          if(HSCmarksheet_size>4000000){
+            alert("HSCmarksheet size is too large");
+            HSCmarksheet.value='';
+            return false;
+          }
+        }
+        var SSCMarksheet_size=SSCMarksheet.files[0].size;
+        if(SSCMarksheet.value!=''){
+          var SSCMarksheet_ext=SSCMarksheet.value.split('.').pop().toLowerCase();
+          if(sext.indexOf(SSCMarksheet_ext)==-1){
+            alert("Invalid SSCMarksheet format");
+            SSCMarksheet.value='';
+            return false;
+          }
+          if(SSCMarksheet_size>4000000){
+            alert("SSCMarksheet size is too large");
+            SSCMarksheet.value='';
+            return false;
+          }
+        }
+        localStorage.setItem("photo",image.value);
+        localStorage.setItem("HSCmarksheet",HSCmarksheet.value);
+        localStorage.setItem("SSCMarksheet",SSCMarksheet.value);
+
+      
+		
+        // else{
+        //   alert("Please submit all the documents")
+        //   return false;
+        // }
+
+      }
+        
+      
+   
+      
+    
+
+
+
+    </script>
+  </body>
+</html>
